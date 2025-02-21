@@ -1,5 +1,5 @@
 {
-  "name": "@voximplant/react-native-foreground-service",
+  "name": "@bspedromanzo/react-native-foreground-service",
   "version": "3.0.2",
   "description": "React native module to start foreground service on android",
   "main": "index.js",
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/voximplant/react-native-foreground-service.git"
+    "url": "https://git@github.com:bspedromanzo/react-native-foreground-service.git"
   },
   "keywords": [
     "react-native",
