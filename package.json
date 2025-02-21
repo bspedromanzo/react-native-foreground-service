@@ -1,13 +1,12 @@
 {
   "name": "@bspedromanzo/react-native-foreground-service",
-  "version": "3.0.2",
+  "version": "1.0.0",
   "description": "React native module to start foreground service on android",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://git@github.com:bspedromanzo/react-native-foreground-service.git"
+    "url": "git+https://git@github.com/bspedromanzo/react-native-foreground-service.git"
   },
   "keywords": [
     "react-native",
