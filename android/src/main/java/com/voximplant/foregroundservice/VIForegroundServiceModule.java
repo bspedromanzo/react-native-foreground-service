@@ -26,6 +26,7 @@ import static com.voximplant.foregroundservice.Constants.ERROR_SERVICE_ERROR;
 import static com.voximplant.foregroundservice.Constants.NOTIFICATION_CONFIG;
 import static com.voximplant.foregroundservice.Constants.FOREGROUND_SERVICE_BUTTON_PRESSED;
 
+import androidx.core.content.ContextCompat;
 
 
 public class VIForegroundServiceModule extends ReactContextBaseJavaModule {
@@ -110,7 +111,13 @@ public class VIForegroundServiceModule extends ReactContextBaseJavaModule {
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(FOREGROUND_SERVICE_BUTTON_PRESSED);
-        getReactApplicationContext().registerReceiver(foregroundReceiver, filter);
+
+        if (Build.VERSION.SDK_INT > 33) {
+            getReactApplicationContext().registerReceiver(foregroundReceiver, filter, ContextCompat.RECEIVER_NOT_EXPORTED);
+        } else {
+            getReactApplicationContext().registerReceiver(foregroundReceiver, filter);
+        }
+
 
         if (componentName != null) {
             promise.resolve(null);
